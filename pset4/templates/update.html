@@ -1,0 +1,16 @@
+<h1>Edit Book</h1>
+<form method="POST" action="/edit/confirm">
+    ISBN <input type="text" name="ISBN" />
+    <br>
+    Book Name <input type="text" name="book_name" />
+    <br>
+    author <select name="authors" > 
+    {% for writer in authors %}
+    <option value="{{writer[0]}}"> {{writer[1]}} </option>     
+    {% endfor %}
+</select>
+    <br> 
+    price <input type="text" name="price" />
+    <br> 
+    <input type="submit">
+</form>

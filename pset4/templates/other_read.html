@@ -1,0 +1,24 @@
+<table border = 1>
+    {% for book in book_list %}
+    <tr>
+      <td> {{book[0]}} </td>  <!-- #how do i know that this table is dynamic and will grow with the list -->
+      <td> {{book[1]}} </td>  <!--#how do i know that it will pull in all columns, how would i limit that? -->
+      <td> {{book[2]}} </td>      
+      <td> {{book[3]}} </td>      
+      <td> {{book[4]}} </td>
+      <td> {{book[5]}} </td>
+      <td> {{book[7]}} </td>
+      <td> 
+        <a href="/edit?id={{book[0]}}&name={{book[1]}}"> <!--#this is the path that i want the image to refrence- how do i generate this path?-->
+            <img src="/static/edit.png" width="30"> <!--#because i named my folder static as well this should work i believe-->
+        </a>
+      </td>
+      <td> 
+        <a href="/delete?id={{book[0]}}"><!-- #same here-->
+            <img src="/static/delete.png" width="30"> 
+        </a>
+      </td>
+
+    </tr>
+    {% endfor %}
+  </table>
